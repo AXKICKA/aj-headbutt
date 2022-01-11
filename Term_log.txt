@@ -1,0 +1,828 @@
+akiljohnson@AXK2017MBP aj-headbutt % git status
+interactive rebase in progress; onto d1be640
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently rebasing branch 'main' on 'd1be640'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Lorem ipsum.md
+        modified:   README.md
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by us:   Random005.md
+        deleted by us:   Random007.md
+
+akiljohnson@AXK2017MBP aj-headbutt % git log --oneline
+d1be640 (HEAD) Mark - push hotfix to address storage retention
+f2c5b85 Revert "Josh/Team - Created and pushed Josh3.md"
+d598924 Dave R - Added DaveR2.md file
+efb693a Dave R - Added more information to DaveR.md
+7924551 Josh/Team - Created and pushed Josh3.md
+b2c936e Josh/Team - Modified README.MD
+85329b5 Donald Updated File
+65c6bf6 Update goat.md
+f405c79 Create goat.md
+259af62 Dave R - Added DaveR file
+79cde78 Charles - 0006 - Delete working file.
+0e1da23 Charles - 0006 - Delete working file.
+e623d1d Charles- #0003 - Add working file for delete action.
+0797d2e Charles - #0002 - Modify CH_File2.md.
+ad2997e Charles - #0001 - Initial push of working files.
+127b7a4 Updated the README file via the web editor.
+001602a Akil/Team - Updated the README with intructions and added random files
+deda24f Mark - update readme
+8264da3 Initial commit
+akiljohnson@AXK2017MBP aj-headbutt % git revert HEAD --no-edit
+error: Reverting is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: revert failed
+akiljohnson@AXK2017MBP aj-headbutt % git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+akiljohnson@AXK2017MBP aj-headbutt % git stage
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+akiljohnson@AXK2017MBP aj-headbutt % git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+akiljohnson@AXK2017MBP aj-headbutt % git add .
+akiljohnson@AXK2017MBP aj-headbutt % git stage
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+akiljohnson@AXK2017MBP aj-headbutt % git stash
+Saved working directory and index state WIP on (no branch): d1be640 Mark - push hotfix to address storage retention
+akiljohnson@AXK2017MBP aj-headbutt % git status     
+interactive rebase in progress; onto d1be640
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git lop --oneline
+git: 'lop' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+akiljohnson@AXK2017MBP aj-headbutt % git log --oneline 
+d1be640 (HEAD) Mark - push hotfix to address storage retention
+f2c5b85 Revert "Josh/Team - Created and pushed Josh3.md"
+d598924 Dave R - Added DaveR2.md file
+efb693a Dave R - Added more information to DaveR.md
+7924551 Josh/Team - Created and pushed Josh3.md
+b2c936e Josh/Team - Modified README.MD
+85329b5 Donald Updated File
+65c6bf6 Update goat.md
+f405c79 Create goat.md
+259af62 Dave R - Added DaveR file
+79cde78 Charles - 0006 - Delete working file.
+0e1da23 Charles - 0006 - Delete working file.
+e623d1d Charles- #0003 - Add working file for delete action.
+0797d2e Charles - #0002 - Modify CH_File2.md.
+ad2997e Charles - #0001 - Initial push of working files.
+127b7a4 Updated the README file via the web editor.
+001602a Akil/Team - Updated the README with intructions and added random files
+deda24f Mark - update readme
+8264da3 Initial commit
+akiljohnson@AXK2017MBP aj-headbutt % git revert HEAD --no-edit
+[detached HEAD 57fb291] Revert "Mark - push hotfix to address storage retention"
+ Date: Tue Jan 11 00:34:31 2022 -0500
+ 16 files changed, 25 insertions(+)
+ create mode 100644 CH_File1.md
+ create mode 100644 CH_File2.md
+ create mode 100644 CH_File3.md
+ create mode 100644 DaveR.md
+ create mode 100644 DaveR2.md
+ create mode 100644 Random001.md
+ create mode 100644 Random002.md
+ create mode 100644 Random003.md
+ create mode 100644 Random004.md
+ create mode 100644 Random005.md
+ create mode 100644 Random006.md
+ create mode 100644 Random007.md
+ create mode 100644 Random008.md
+ create mode 100644 Random009.md
+ create mode 100644 Random010.md
+ create mode 100644 goat.md
+akiljohnson@AXK2017MBP aj-headbutt % git pull
+You are not currently on a branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+akiljohnson@AXK2017MBP aj-headbutt % git log --oneline        
+57fb291 (HEAD) Revert "Mark - push hotfix to address storage retention"
+d1be640 Mark - push hotfix to address storage retention
+f2c5b85 Revert "Josh/Team - Created and pushed Josh3.md"
+d598924 Dave R - Added DaveR2.md file
+efb693a Dave R - Added more information to DaveR.md
+7924551 Josh/Team - Created and pushed Josh3.md
+b2c936e Josh/Team - Modified README.MD
+85329b5 Donald Updated File
+65c6bf6 Update goat.md
+f405c79 Create goat.md
+259af62 Dave R - Added DaveR file
+79cde78 Charles - 0006 - Delete working file.
+0e1da23 Charles - 0006 - Delete working file.
+e623d1d Charles- #0003 - Add working file for delete action.
+0797d2e Charles - #0002 - Modify CH_File2.md.
+ad2997e Charles - #0001 - Initial push of working files.
+127b7a4 Updated the README file via the web editor.
+001602a Akil/Team - Updated the README with intructions and added random files
+deda24f Mark - update readme
+8264da3 Initial commit
+akiljohnson@AXK2017MBP aj-headbutt % git branch --help
+akiljohnson@AXK2017MBP aj-headbutt % git branch       
+* (no branch, rebasing main)
+  main
+akiljohnson@AXK2017MBP aj-headbutt % git push
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+akiljohnson@AXK2017MBP aj-headbutt % git checkout --help
+akiljohnson@AXK2017MBP aj-headbutt % git status
+interactive rebase in progress; onto d1be640
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git commit --amend
+[detached HEAD dcae3c3] Revert "Mark - push hotfix to address storage retention"
+ Date: Tue Jan 11 00:34:31 2022 -0500
+ 16 files changed, 25 insertions(+)
+ create mode 100644 CH_File1.md
+ create mode 100644 CH_File2.md
+ create mode 100644 CH_File3.md
+ create mode 100644 DaveR.md
+ create mode 100644 DaveR2.md
+ create mode 100644 Random001.md
+ create mode 100644 Random002.md
+ create mode 100644 Random003.md
+ create mode 100644 Random004.md
+ create mode 100644 Random005.md
+ create mode 100644 Random006.md
+ create mode 100644 Random007.md
+ create mode 100644 Random008.md
+ create mode 100644 Random009.md
+ create mode 100644 Random010.md
+ create mode 100644 goat.md
+akiljohnson@AXK2017MBP aj-headbutt % git status
+interactive rebase in progress; onto d1be640
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git checkout main 
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  dcae3c3 Revert "Mark - push hotfix to address storage retention"
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> dcae3c3
+
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+akiljohnson@AXK2017MBP aj-headbutt % git branch rev dcae3c3
+akiljohnson@AXK2017MBP aj-headbutt % git commit -m 
+error: switch `m' requires a value
+akiljohnson@AXK2017MBP aj-headbutt % git commit -m "Akil - Revert Hotfix"
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git branch
+* main
+  rev
+akiljohnson@AXK2017MBP aj-headbutt % git pull
+CONFLICT (modify/delete): Random005.md deleted in 886bff604c8d4f5bdac459e5f39e54f3f0fdd9ae and modified in HEAD.  Version HEAD of Random005.md left in tree.
+CONFLICT (modify/delete): Random007.md deleted in 886bff604c8d4f5bdac459e5f39e54f3f0fdd9ae and modified in HEAD.  Version HEAD of Random007.md left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        deleted:    CH_File1.md
+        deleted:    CH_File2.md
+        deleted:    CH_File3.md
+        deleted:    DaveR.md
+        deleted:    DaveR2.md
+        deleted:    Random001.md
+        deleted:    Random002.md
+        deleted:    Random003.md
+        deleted:    Random004.md
+        deleted:    Random006.md
+        deleted:    Random008.md
+        deleted:    Random009.md
+        deleted:    Random010.md
+        new file:   branch.md
+        deleted:    goat.md
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by them: Random005.md
+        deleted by them: Random007.md
+
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        deleted:    CH_File1.md
+        deleted:    CH_File2.md
+        deleted:    CH_File3.md
+        deleted:    DaveR.md
+        deleted:    DaveR2.md
+        deleted:    Random001.md
+        deleted:    Random002.md
+        deleted:    Random003.md
+        deleted:    Random004.md
+        deleted:    Random006.md
+        deleted:    Random008.md
+        deleted:    Random009.md
+        deleted:    Random010.md
+        new file:   branch.md
+        deleted:    goat.md
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by them: Random005.md
+        deleted by them: Random007.md
+
+akiljohnson@AXK2017MBP aj-headbutt % git branch 
+* main
+  rev
+akiljohnson@AXK2017MBP aj-headbutt % git fetch
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        deleted:    CH_File1.md
+        deleted:    CH_File2.md
+        deleted:    CH_File3.md
+        deleted:    DaveR.md
+        deleted:    DaveR2.md
+        deleted:    Random001.md
+        deleted:    Random002.md
+        deleted:    Random003.md
+        deleted:    Random004.md
+        deleted:    Random006.md
+        deleted:    Random008.md
+        deleted:    Random009.md
+        deleted:    Random010.md
+        new file:   branch.md
+        deleted:    goat.md
+
+Unmerged paths:
+  (use "git add/rm <file>..." as appropriate to mark resolution)
+        deleted by them: Random005.md
+        deleted by them: Random007.md
+
+akiljohnson@AXK2017MBP aj-headbutt % git stash
+Random005.md: needs merge
+Random007.md: needs merge
+akiljohnson@AXK2017MBP aj-headbutt % git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+akiljohnson@AXK2017MBP aj-headbutt % git pop
+git: 'pop' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+akiljohnson@AXK2017MBP aj-headbutt % git status pop
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+akiljohnson@AXK2017MBP aj-headbutt % git add Random005.md Random007.md
+akiljohnson@AXK2017MBP aj-headbutt % git commit -m "Akil - Add content to Random005 and Random007"
+[main bd0a5f5] Akil - Add content to Random005 and Random007
+akiljohnson@AXK2017MBP aj-headbutt % git pull
+Already up to date.
+akiljohnson@AXK2017MBP aj-headbutt % ls
+README.md       Random005.md    Random007.md    branch.md
+akiljohnson@AXK2017MBP aj-headbutt % git branch 
+* main
+  rev
+akiljohnson@AXK2017MBP aj-headbutt % git commit
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git push
+Enumerating objects: 13, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 750 bytes | 750.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:AXKICKA/aj-headbutt.git
+   886bff6..bd0a5f5  main -> main
+akiljohnson@AXK2017MBP aj-headbutt % ls 
+README.md       Random005.md    Random007.md    branch.md
+akiljohnson@AXK2017MBP aj-headbutt % less Random007
+Random007: No such file or directory
+akiljohnson@AXK2017MBP aj-headbutt % less Random007.md 
+akiljohnson@AXK2017MBP aj-headbutt % git branch 
+* main
+  rev
+akiljohnson@AXK2017MBP aj-headbutt % git checkout rev
+Switched to branch 'rev'
+akiljohnson@AXK2017MBP aj-headbutt % ls
+CH_File1.md     CH_File3.md     DaveR2.md       Random001.md    Random003.md    Random005.md    Random007.md    Random009.md    goat.md
+CH_File2.md     DaveR.md        README.md       Random002.md    Random004.md    Random006.md    Random008.md    Random010.md
+akiljohnson@AXK2017MBP aj-headbutt % less Random005.md 
+akiljohnson@AXK2017MBP aj-headbutt % less Random007.md 
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch rev
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch rev
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git commit --amend
+[rev 5bd8d17] Revert "Mark - push hotfix to address storage retention"
+ Date: Tue Jan 11 00:34:31 2022 -0500
+ 16 files changed, 25 insertions(+)
+ create mode 100644 CH_File1.md
+ create mode 100644 CH_File2.md
+ create mode 100644 CH_File3.md
+ create mode 100644 DaveR.md
+ create mode 100644 DaveR2.md
+ create mode 100644 Random001.md
+ create mode 100644 Random002.md
+ create mode 100644 Random003.md
+ create mode 100644 Random004.md
+ create mode 100644 Random005.md
+ create mode 100644 Random006.md
+ create mode 100644 Random007.md
+ create mode 100644 Random008.md
+ create mode 100644 Random009.md
+ create mode 100644 Random010.md
+ create mode 100644 goat.md
+akiljohnson@AXK2017MBP aj-headbutt % git status        
+On branch rev
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git rebase --continue
+error: update_ref failed for ref 'refs/heads/main': cannot lock ref 'refs/heads/main': is at bd0a5f5d765061e6f228f7401447bf4321440a99 but expected 7bddb12bcf9eee75a7b4d1c35416adaa85796601
+error: could not update refs/heads/main
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch rev
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git log
+commit 5bd8d17e6e05b36715b5bbd141097ebd6c481a21 (HEAD -> rev)
+Author: Akil Johnson <dermaz@yahoo.com>
+Date:   Tue Jan 11 00:34:31 2022 -0500
+
+    Revert "Mark - push hotfix to address storage retention"
+    
+    This reverts commit d1be640320c766524548b545608bc948e0bfa31b.
+
+commit d1be640320c766524548b545608bc948e0bfa31b
+Author: Mark Bennett <mark.bennett@systemward.com>
+Date:   Wed Dec 29 10:09:42 2021 -0500
+
+    Mark - push hotfix to address storage retention
+
+commit f2c5b85aa6c41b8fedda38405c196d4f34e6c0dd
+Author: David Regelsky <dregelsky@gmail.com>
+Date:   Wed Dec 22 19:54:27 2021 -0500
+
+    Revert "Josh/Team - Created and pushed Josh3.md"
+    
+    This reverts commit 7924551c7c8ec393eda33586cf48b0b610fb97ea.
+
+commit d59892480403ebcda6f48583aa3d3b5f7cd77f60
+Author: David Regelsky <dregelsky@gmail.com>
+Date:   Mon Dec 20 18:33:43 2021 -0500
+
+    Dave R - Added DaveR2.md file
+
+commit efb693a45d6e29868c01a2432f6246d53aa7e4b7
+Author: David Regelsky <dregelsky@gmail.com>
+Date:   Mon Dec 20 18:32:51 2021 -0500
+
+    Dave R - Added more information to DaveR.md
+
+commit 7924551c7c8ec393eda33586cf48b0b610fb97ea
+Author: Joshua Roman <josh.ray.roman@gmail.com>
+Date:   Sun Dec 19 14:58:40 2021 -0500
+
+    Josh/Team - Created and pushed Josh3.md
+
+commit b2c936e9b6ddd4ee5602e3e5a4f63376e0a66303
+Author: Joshua Roman <josh.ray.roman@gmail.com>
+Date:   Sun Dec 19 14:57:24 2021 -0500
+
+    Josh/Team - Modified README.MD
+
+commit 85329b59ca8d02579f59f5bf6830d1dcfb8f689b
+Author: Donald Patterson <94813746+dapatter333@users.noreply.github.com>
+Date:   Sat Dec 18 19:58:37 2021 -0500
+
+    Donald Updated File
+
+commit 65c6bf69165ba85eacc0f6e7f96a20ffe7754af0
+Author: Donald Patterson <94813746+dapatter333@users.noreply.github.com>
+Date:   Sat Dec 18 19:57:27 2021 -0500
+
+    Update goat.md
+
+commit f405c79a61d978fd895f5b897cfdd3814c236429
+Author: Donald Patterson <94813746+dapatter333@users.noreply.github.com>
+Date:   Sat Dec 18 19:55:12 2021 -0500
+
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch rev
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git branch 
+  main
+* rev
+akiljohnson@AXK2017MBP aj-headbutt % ls
+CH_File1.md     CH_File3.md     DaveR2.md       Random001.md    Random003.md    Random005.md    Random007.md    Random009.md    goat.md
+CH_File2.md     DaveR.md        README.md       Random002.md    Random004.md    Random006.md    Random008.md    Random010.md
+akiljohnson@AXK2017MBP aj-headbutt % git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+akiljohnson@AXK2017MBP aj-headbutt % git merge rev
+Auto-merging Random005.md
+Auto-merging Random007.md
+Merge made by the 'ort' strategy.
+ CH_File1.md  | 5 +++++
+ CH_File2.md  | 6 ++++++
+ CH_File3.md  | 5 +++++
+ DaveR.md     | 2 ++
+ DaveR2.md    | 1 +
+ Random001.md | 0
+ Random002.md | 0
+ Random003.md | 0
+ Random004.md | 0
+ Random006.md | 0
+ Random008.md | 0
+ Random009.md | 0
+ Random010.md | 1 +
+ goat.md      | 5 +++++
+ 14 files changed, 25 insertions(+)
+ create mode 100644 CH_File1.md
+ create mode 100644 CH_File2.md
+ create mode 100644 CH_File3.md
+ create mode 100644 DaveR.md
+ create mode 100644 DaveR2.md
+ create mode 100644 Random001.md
+ create mode 100644 Random002.md
+ create mode 100644 Random003.md
+ create mode 100644 Random004.md
+ create mode 100644 Random006.md
+ create mode 100644 Random008.md
+ create mode 100644 Random009.md
+ create mode 100644 Random010.md
+ create mode 100644 goat.md
+akiljohnson@AXK2017MBP aj-headbutt % ls
+CH_File1.md     CH_File3.md     DaveR2.md       Random001.md    Random003.md    Random005.md    Random007.md    Random009.md    branch.md
+CH_File2.md     DaveR.md        README.md       Random002.md    Random004.md    Random006.md    Random008.md    Random010.md    goat.md
+akiljohnson@AXK2017MBP aj-headbutt % git branch 
+* main
+  rev
+akiljohnson@AXK2017MBP aj-headbutt % less Random005.md 
+akiljohnson@AXK2017MBP aj-headbutt % git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (11/11), 1.22 KiB | 1.22 MiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:AXKICKA/aj-headbutt.git
+   bd0a5f5..c8a0c39  main -> main
+akiljohnson@AXK2017MBP aj-headbutt % git branch
+* main
+  rev
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Last command done (1 command done):
+   pick 7bddb12 Akil - add text to Random005, Random007, README
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on 'd1be640'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git log
+commit c8a0c39ca6bc09430bb495da481f4a157c580c58 (HEAD -> main, origin/main, origin/HEAD)
+Merge: bd0a5f5 5bd8d17
+Author: Akil Johnson <dermaz@yahoo.com>
+Date:   Tue Jan 11 16:28:01 2022 -0500
+
+    Merge branch 'rev'
+    
+    Akil - Correct pull and push conflicts
+
+commit 5bd8d17e6e05b36715b5bbd141097ebd6c481a21 (rev)
+Author: Akil Johnson <dermaz@yahoo.com>
+Date:   Tue Jan 11 00:34:31 2022 -0500
+
+    Revert "Mark - push hotfix to address storage retention"
+    
+    This reverts commit d1be640320c766524548b545608bc948e0bfa31b.
+
+commit bd0a5f5d765061e6f228f7401447bf4321440a99
+Merge: 7bddb12 886bff6
+Author: Akil Johnson <dermaz@yahoo.com>
+Date:   Tue Jan 11 15:36:38 2022 -0500
+
+    Akil - Add content to Random005 and Random007
+
+commit 886bff604c8d4f5bdac459e5f39e54f3f0fdd9ae
+Author: Joshua Roman <josh.ray.roman@gmail.com>
+Date:   Fri Dec 31 02:25:16 2021 -0500
+
+    Josh - Create text document.
+
+commit 7bddb12bcf9eee75a7b4d1c35416adaa85796601
+Author: Akil Johnson <dermaz@yahoo.com>
+Date:   Fri Dec 31 00:32:12 2021 -0500
+
+    Akil - add text to Random005, Random007, README
+
+commit d1be640320c766524548b545608bc948e0bfa31b
+Author: Mark Bennett <mark.bennett@systemward.com>
+Date:   Wed Dec 29 10:09:42 2021 -0500
+
+    Mark - push hotfix to address storage retention
+
+commit f2c5b85aa6c41b8fedda38405c196d4f34e6c0dd
+Author: David Regelsky <dregelsky@gmail.com>
+Date:   Wed Dec 22 19:54:27 2021 -0500
+
+    Revert "Josh/Team - Created and pushed Josh3.md"
+    
+    This reverts commit 7924551c7c8ec393eda33586cf48b0b610fb97ea.
+
+commit d59892480403ebcda6f48583aa3d3b5f7cd77f60
+Author: David Regelsky <dregelsky@gmail.com>
+Date:   Mon Dec 20 18:33:43 2021 -0500
+
+    Dave R - Added DaveR2.md file
+
+commit efb693a45d6e29868c01a2432f6246d53aa7e4b7
+Author: David Regelsky <dregelsky@gmail.com>
+Date:   Mon Dec 20 18:32:51 2021 -0500
+
+    Dave R - Added more information to DaveR.md
+
+commit 7924551c7c8ec393eda33586cf48b0b610fb97ea
+Author: Joshua Roman <josh.ray.roman@gmail.com>
+Date:   Sun Dec 19 14:58:40 2021 -0500
+
+    Josh/Team - Created and pushed Josh3.md
+
+commit b2c936e9b6ddd4ee5602e3e5a4f63376e0a66303
+Author: Joshua Roman <josh.ray.roman@gmail.com>
+Date:   Sun Dec 19 14:57:24 2021 -0500
+
+    Josh/Team - Modified README.MD
+
+commit 85329b59ca8d02579f59f5bf6830d1dcfb8f689b
+Author: Donald Patterson <94813746+dapatter333@users.noreply.github.com>
+Date:   Sat Dec 18 19:58:37 2021 -0500
+
+    Donald Updated File
+
+commit 65c6bf69165ba85eacc0f6e7f96a20ffe7754af0
+Author: Donald Patterson <94813746+dapatter333@users.noreply.github.com>
+Date:   Sat Dec 18 19:57:27 2021 -0500
+
+    Update goat.md
+
+commit f405c79a61d978fd895f5b897cfdd3814c236429
+Author: Donald Patterson <94813746+dapatter333@users.noreply.github.com>
+Date:   Sat Dec 18 19:55:12 2021 -0500
+
+    Create goat.md
+
+commit 259af624e17066a3cdc51ea377ea64d47273bc37
+Author: David Regelsky <dregelsky@gmail.com>
+Date:   Sat Dec 18 10:43:26 2021 -0500
+
+    Dave R - Added DaveR file
+
+commit 79cde7891b884555cb626288d2c6bc77f11d1bcf
+Author: Charles Hodge <themercilessviolator-azdo@yahoo.com>
+Date:   Fri Dec 17 19:17:55 2021 -0500
+
+    Charles - 0006 - Delete working file.
+
+commit 0e1da23f853319cd04a960f9b661eee102e58b62
+Author: Charles Hodge <themercilessviolator-azdo@yahoo.com>
+Date:   Fri Dec 17 19:12:34 2021 -0500
+
+    Charles - 0006 - Delete working file.
+
+commit e623d1d949d5f9de2a78d1488b931e6ad543fa3b
+Author: Charles Hodge <themercilessviolator-azdo@yahoo.com>
+Date:   Fri Dec 17 19:08:12 2021 -0500
+
+    Charles- #0003 - Add working file for delete action.
+
+commit 0797d2e339ed9eb380a5140ac1b98db11266ac74
+Author: Charles Hodge <themercilessviolator-azdo@yahoo.com>
+Date:   Fri Dec 17 19:01:50 2021 -0500
+
+    Charles - #0002 - Modify CH_File2.md.
+
+commit ad2997e6584c0d7aeeac7dce75843dd285286490
+Author: Charles Hodge <themercilessviolator-azdo@yahoo.com>
+Date:   Fri Dec 17 18:51:20 2021 -0500
+
+    Charles - #0001 - Initial push of working files.
+
+commit 127b7a422f7499f97185e00f22eba212d843f834
+Author: AXKICKA <94814093+AXKICKA@users.noreply.github.com>
+Date:   Wed Dec 15 03:16:30 2021 -0500
+
+    Updated the README file via the web editor.
+
+commit 001602a33ae59905e22d52873651fc510ab13d0d
+Author: Akil Johnson <dermaz@yahoo.com>
+Date:   Wed Dec 15 01:39:53 2021 -0500
+
+    Akil/Team - Updated the README with intructions and added random files
+
+commit deda24f440737a7af8ba065d079516205c255cc6
+Author: Mark Bennett <mark.bennett@systemward.com>
+Date:   Mon Dec 13 20:49:45 2021 -0500
+
+    Mark - update readme
+
+commit 8264da3bbcce9fc3b1500e4190e835c527a795a0
+Author: AXKICKA <94814093+AXKICKA@users.noreply.github.com>
+Date:   Sun Dec 12 23:42:07 2021 -0500
+
+    Initial commit
+akiljohnson@AXK2017MBP aj-headbutt % git rebase --abort
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch main
+Your branch is behind 'origin/main' by 5 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git pull
+Updating 7bddb12..c8a0c39
+Fast-forward
+ branch.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branch.md
+akiljohnson@AXK2017MBP aj-headbutt % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+akiljohnson@AXK2017MBP aj-headbutt % git branch 
+* main
+  rev
+akiljohnson@AXK2017MBP aj-headbutt % git push
+Everything up-to-date
+akiljohnson@AXK2017MBP aj-headbutt % 
