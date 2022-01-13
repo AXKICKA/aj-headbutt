@@ -41,7 +41,7 @@ some usage: git [***--version***] [***--help***]
 <dt>git pull</dt>
 <dd>Fetch from and integrate with another repository or a local branch.</dd>
 <dd>Add the code below to .zshrc file to create an alias called ***multipull*** to pull multiple repos at once.</dd>
-~~~~alias multipull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
+~~~alias multipull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
 ~~~
 <dt>git push</dt>
 <dd>Update remote refs along with associated objects.</dd>
