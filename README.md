@@ -8,7 +8,7 @@
 some usage: git [***--version***] [***--help***]           
  
 
-## Some *git* commands that I have tried and used in  training:
+## Some *git* commands that I have tried and used in training:
 
 
 
