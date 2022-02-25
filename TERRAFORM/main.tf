@@ -2,11 +2,21 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
+
 terraform {
   backend "local" {
-    path = "/your/path/to/terraform.tfstate"
+    path = "../../terraform.tfstate"
   }
 }
+
+
+# terraform {
+#   backend "local" {
+#     workspace_dir = "/path/to/terraform.tfstate.d"
+#   }
+# }
+
 
 # terraform {
 #   backend "s3" {
