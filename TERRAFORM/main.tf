@@ -3,11 +3,11 @@ provider "aws" {
 }
 
 
-terraform {
-  backend "local" {
-    path = "./terraform.tfstate"
-  }
-}
+# terraform {
+#   backend "local" {
+#     path = "./terraform.tfstate"
+#   }
+# }
 
 
 # terraform {
@@ -17,10 +17,14 @@ terraform {
 # }
 
 
-# terraform {
-#   backend "s3" {
-#     bucket = "your-bucket-name"
-#     key    = "your-tf-state-name.tfstate"
-#     region = "your-region-name-1"
-#   }
-# }
+terraform {
+  backend "s3" {
+    bucket = "axkterraformst"
+    key    = "terrform.tfstate"
+    region = "us-east-1"
+  }
+}
+
+
+
+
