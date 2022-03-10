@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "axk" {
 
   tags = {
     Name        = "axk-bucket"
-    Environment = "axk-tftrain"
+    Environment = "terraform-training"
   }
 }
 
@@ -12,10 +12,9 @@ resource "aws_s3_bucket_acl" "example" {
   acl    = "private"
 }
 
-# resource "aws_s3_bucket_versioning" "versioning_example" {
-#   bucket = aws_s3_bucket.axk.id
-#   versioning_configuration {
-#     status = "Enabled"
-#   }
-# }
-
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = aws_s3_bucket.axk.id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
