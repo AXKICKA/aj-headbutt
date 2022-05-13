@@ -83,4 +83,3 @@ alias multipull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} p
 <dd>Can be used to restore the index, overlapping with git restore.</dd>
 <dt>git ls-files</dt>
 <dd>Show information about files in the index and the working tree.</dd>
-<dd>Test, Test, Test.</dd>
