@@ -3,7 +3,7 @@ provider "aws" {
   # profile = "username"
 }
 
-# Use to configure a terraform local state
+# Used to configure a terraform local state
 # terraform {
 #   backend "local" {
 #     path = "./terraform.tfstate"
