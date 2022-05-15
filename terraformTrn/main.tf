@@ -20,8 +20,8 @@ provider "aws" {
 # Used to configure a terraform remote state 
 terraform {
   backend "s3" {
-    bucket = "axkterraformst"    #This is the S3 bucket name created in AWS
-    key    = "terrform.tfstate"  #This is the name of the tfstate file within the bucket
+    bucket = "axkterraformst"   #This is the S3 bucket name created in AWS
+    key    = "terrform.tfstate" #This is the name of the tfstate file within the bucket
     region = "us-east-1"
   }
 }
