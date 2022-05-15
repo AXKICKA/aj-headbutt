@@ -6,9 +6,9 @@ module "alb" {
 
   load_balancer_type = var.load_balancer_type
 
-  vpc_id             = "vpc-abcde012"
-  subnets            = ["subnet-abcde012", "subnet-bcde012a"]
-  security_groups    = ["sg-edcd9784", "sg-edcd9785"]
+  vpc_id             = "vpc-094414dc82d5b64d9"
+  subnets            = ["subnet-0129694773f95369c", "subnet-0cccc3e6185f55c8d"]
+  security_groups    = ["sg-0403d92313aaa7685", "sg-0458a78411b68e9fa"]
 
   access_logs = {
     bucket = "my-alb-logs"
