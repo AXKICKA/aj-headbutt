@@ -1,0 +1,79 @@
+version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@3.1.1
+  terraform: circleci/terraform@3.0.1
+jobs:
+  init-plan:
+    working_directory: ./terraform
+    executor: terraform/default
+    steps:
+      - checkout
+      - aws-cli/setup:
+          profile-name: default
+      - terraform/install:
+          arch: amd64
+          os: linux
+          terraform_version: "1.1.9"
+      - terraform/fmt:
+          path: .
+      - terraform/validate:
+          path: .
+      - terraform/init:
+          backend: true
+          backend_config_file: terraform.tfstate
+          path: .
+      - terraform/plan:
+          backend_config_file: terraform.tfstate
+          path: .
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+  apply:
+    working_directory: ./terraform
+    executor: terraform/default
+    steps:
+      - checkout
+      - aws-cli/setup:
+          profile-name: default
+      - attach_workspace:
+          at: ./terraform
+      - terraform/install:
+          arch: amd64
+          os: linux
+          terraform_version: "1.1.9"
+      - terraform/apply:
+          backend_config_file: terraform.tfstate
+          path: .
+  destroy:
+    working_directory: ./terraform
+    executor: terraform/default
+    steps:
+      - checkout
+      - aws-cli/setup:
+          profile-name: default
+      - attach_workspace:
+          at: ./terraform
+      - terraform/install:
+          arch: amd64
+          os: linux
+          terraform_version: "1.1.9"
+      - terraform/destroy:
+          path: .
+workflows:
+    deploy:
+      jobs:
+        - init-plan:
+            context: AWS_CREDENTIALS
+        - hold:
+            type: approval
+            requires:
+              - init-plan
+        - apply:
+            context: AWS_CREDENTIALS
+            requires:
+              - hold
+        - destroy:
+            context: AWS_CREDENTIALS
+            requires:
+              - apply
